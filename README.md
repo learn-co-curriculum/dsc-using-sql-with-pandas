@@ -1,5 +1,5 @@
 
-# Using SQL With Pandas
+# Using SQL with Pandas
 
 ## Introduction
 
@@ -14,6 +14,13 @@ Now, let's consider the structure of a table from a **_SQL database_**.
 <img src="sql_example.png">
 
 You've probably noticed by now that they're essentially the same--a table of values, with each row having a unique index and each column having a unique name.  This allows us to quickly and easily access information when using SQL.  In this section, we'll learn how we can use SQL-style queries to query pandas DataFrames!
+
+## Objectives
+You will be able to:
+- Understand the basic syntax for querying pandas DataFrames with SQL statements
+- Understand and explain how Pandas can be used to work directly with .sql files
+- Reference the pandasql package documentation as needed
+
 
 ## Using `.query()`
 
@@ -43,7 +50,7 @@ Since SQL is such a powerful, comfortable tool for Data Scientists, some people 
 
 We can install `pandasql` using the bash comman `pip install pandasql`.
 
-#### Importing pandasql
+### Importing pandasql
 
 In order to use `pandasql`, we need to start by importing a `sqldf` object from `pandasql`
 
@@ -59,7 +66,7 @@ pysqldf = lambda q: sqldf(q, globals())
 
 Now, when we pass a query into `pysqldf`, the lambda will also pass along the globals for us, saving us that repetitive task. 
 
-#### Writing Queries
+### Writing Queries
 
 To write a query, we just format it as a multi-line string!
 
@@ -79,6 +86,6 @@ In order to query DataFrames, we can just pass in the query string we've created
 results = pysqldf(q)
 ```
 
-# Conclusion
+## Summary
 
 These advanced methods for querying DataFrames can make your life a lot easier by simplifying the syntax and allowing us to make use of SQL--use them to save yourself time and give keep your SQL skills strong!
