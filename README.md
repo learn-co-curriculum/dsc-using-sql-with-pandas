@@ -5,13 +5,13 @@
 
 Consider the structure of a **_Pandas DataFrame_**.  
 
-<img src="df_example.png">
+<img src="df_example2.png">
 
 
 Now, let's consider the structure of a table from a **_SQL database_**.
 
 
-<img src="sql_example.png">
+<img src="sql_example2.png">
 
 You've probably noticed by now that they're essentially the same--a table of values, with each row having a unique index and each column having a unique name.  This allows us to quickly and easily access information when using SQL.  In this section, we'll learn how we can use SQL-style queries to query pandas DataFrames!
 
@@ -24,7 +24,7 @@ You will be able to:
 
 ## Using `.query()`
 
-Pandas DataFrames come with a built in query method, which allows us to get information from DataFrames quickly without using the cumbersome slicing syntax.  
+Pandas DataFrames come with a built in query method, which allows you to get information from DataFrames quickly without using the cumbersome slicing syntax.  
 
 See the following examples:
 
@@ -38,7 +38,7 @@ foo_df = bar_df.query("Col_1 > Col_2")
 # These two lines are equivalent!
 ```
 
-Note that if we want to use `and` and `or` statements with the `.query()` method, we'll need to use `"&"` and `"|"` instead.
+Note that if you want to use `and` and `or` statements with the `.query()` method, you'll need to use `"&"` and `"|"` instead.
 
 ```python
 foo_df = bar_df.query("Col_1 > Col_2 & Col_2 <= Col_3")
@@ -58,17 +58,17 @@ In order to use `pandasql`, we need to start by importing a `sqldf` object from 
 from pandasql import sqldf
 ```
 
-Next, we'll write a lambda function that will make it quicker and easier to write queries.  Normally, we would have to pass in the global variables every time we use an object.  In order to avoid doing this every time, we'll write a lambda that does this for us. 
+Next, it's helpful to write a lambda function that will make it quicker and easier to write queries.  Normally, you would have to pass in the global variables every time we use an object.  In order to avoid doing this every time, here's how to write a lambda that does this for you:
 
 ```python
 pysqldf = lambda q: sqldf(q, globals())
 ```
 
-Now, when we pass a query into `pysqldf`, the lambda will also pass along the globals for us, saving us that repetitive task. 
+Now, when you pass a query into `pysqldf`, the lambda will also pass along the globals, saving you that repetitive task. 
 
 ### Writing Queries
 
-To write a query, we just format it as a multi-line string!
+To write a query, you just format it as a multi-line string!
 
 ```python
 q = """SELECT
@@ -80,7 +80,7 @@ q = """SELECT
            ON m.date = b.date;"""
 ```
 
-In order to query DataFrames, we can just pass in the query string we've created to our `sqldf` object that we stored in `pysqldf`.  This will return a DataFrame.  
+In order to query DataFrames, you can just pass in the query string you've created to our `sqldf` object that you stored in `pysqldf`.  This will return a DataFrame.  
 
 ```python
 results = pysqldf(q)
