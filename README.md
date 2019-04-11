@@ -5,13 +5,13 @@
 
 Consider the structure of a **_Pandas DataFrame_**.  
 
-<img src="df_example2.png">
+<img src="images/df_example2.png" width="850">
 
 
 Now, let's consider the structure of a table from a **_SQL database_**.
 
 
-<img src="sql_example2.png">
+<img src="images/sql_example2.png">
 
 You've probably noticed by now that they're essentially the same--a table of values, with each row having a unique index and each column having a unique name.  This allows us to quickly and easily access information when using SQL.  In this section, we'll learn how we can use SQL-style queries to query pandas DataFrames!
 
@@ -24,7 +24,7 @@ You will be able to:
 
 ## Using `.query()`
 
-Pandas DataFrames come with a built in query method, which allows you to get information from DataFrames quickly without using the cumbersome slicing syntax.  
+Pandas DataFrames come with a built-in query method, which allows you to get information from DataFrames quickly without using the cumbersome slicing syntax.  
 
 See the following examples:
 
@@ -48,7 +48,7 @@ foo_df = bar_df.query("Col_1 > Col_2 & Col_2 <= Col_3")
 
 Since SQL is such a powerful, comfortable tool for Data Scientists, some people had the bright idea of creating a library that lets users query DataFrames using SQL-style syntax.  This library is called [pandasql](https://pypi.org/project/pandasql/).
 
-We can install `pandasql` using the bash comman `pip install pandasql`.
+We can install `pandasql` using the bash command `pip install pandasql`.
 
 ### Importing pandasql
 
