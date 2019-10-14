@@ -18,7 +18,7 @@ You've probably noticed by now that they're essentially the same--a table of val
 ## Objectives
 You will be able to:
 * Compare accessing data in a DataFrame using query methods and conditional logic
-* Query dataframes with SQL using the pandasql library
+* Query DataFrames with SQL using the pandasql library
 
 
 ## Using `.query()`
