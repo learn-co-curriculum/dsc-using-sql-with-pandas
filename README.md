@@ -17,9 +17,8 @@ You've probably noticed by now that they're essentially the same--a table of val
 
 ## Objectives
 You will be able to:
-- Understand the basic syntax for querying pandas DataFrames with SQL statements
-- Understand and explain how Pandas can be used to work directly with .sql files
-- Reference the pandasql package documentation as needed
+* Compare accessing data in a DataFrame using query methods and conditional logic
+* Query dataframes with SQL using the pandasql library
 
 
 ## Using `.query()`
