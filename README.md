@@ -1,24 +1,25 @@
-
 # Using SQL with Pandas
 
 ## Introduction
 
 Consider the structure of a **_Pandas DataFrame_**.  
 
-<img src="images/df_example2.png" width="850">
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-using-sql-with-pandas/master/images/df_example2.png" alt="dataframe where each row represents a type of wine" width="850">
 
 
 Now, let's consider the structure of a table from a **_SQL database_**.
 
 
-<img src="images/sql_example2.png">
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-using-sql-with-pandas/master/images/sql_example2.png" alt="SQL table where each record represents an employee">
 
 You've probably noticed by now that they're essentially the same--a table of values, with each row having a unique index and each column having a unique name.  This allows us to quickly and easily access information when using SQL.  In this section, we'll learn how we can use SQL-style queries to query pandas DataFrames!
 
 ## Objectives
+
 You will be able to:
+
 * Compare accessing data in a DataFrame using query methods and conditional logic
-* Query DataFrames with SQL using the pandasql library
+* Query DataFrames with SQL using the `pandasql` library
 
 
 ## Using `.query()`
