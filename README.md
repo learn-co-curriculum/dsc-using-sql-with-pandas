@@ -38,7 +38,7 @@ foo_df = bar_df.query("Col_1 > Col_2")
 # These two lines are equivalent!
 ```
 
-Note that if you want to use `and` and `or` statements with the `.query()` method, you'll need to use `"&"` and `"|"` instead.
+Note that if you want to use `AND` and `OR` statements with the .query() method, you'll need to make them lowercase (`and` and `or`) or use "&" and "|" instead.
 
 ```python
 foo_df = bar_df.query("Col_1 > Col_2 & Col_2 <= Col_3")
